@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CALCULATOR</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 30px;
+    }
+
+    input {
+      width: 240px;
+      height: 50px;
+      font-size: 24px;
+      text-align: right;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: none;
+      padding-right: 10px;
+    }
+
+    .calculator {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      gap: 10px;
+    }
+
+    button {
+      width: 60px;
+      height: 60px;
+      border-radius: 70%;
+      font-size: 20px;
+      border: #b51818 ;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    .operator {
+      background-color: rgb(215, 149, 26);
+      color: rgb(244, 243, 241);
+    }
+
+    .clear {
+      width: 130px;
+      border-radius: 30px;
+      grid-column: span 2;
+      background-color: #333;
+      font-size: 20px;
+    }
+  </style>  
+
+
+
+</head>
+<body>
+
+  <input type="text" id="display" readonly>
+
+  
+  <p>
+
+    <button onclick="
+    calculation +='1';
+    document.getElementById('display').value = calculation;
+    ">1</button>
+  
+  <button onclick="
+  calculation +='2';
+  document.getElementById('display').value = calculation;
+  ">2</button>
+
+<button onclick="
+calculation +='3';
+document.getElementById('display').value = calculation;
+">3</button>
+
+  </p>
+  
+  <p>
+<button onclick="
+calculation +='4';
+document.getElementById('display').value = calculation;
+">4</button>
+
+<button onclick="
+calculation +='5';
+document.getElementById('display').value = calculation;
+">5</button>
+
+<button onclick="
+calculation +=6;
+document.getElementById('display').value = calculation;
+">6</button>
+    
+  </p>
+
+<p>
+  <button onclick="
+calculation +=7;
+document.getElementById('display').value = calculation;
+">7</button>
+
+<button onclick="
+calculation +=8;
+document.getElementById('display').value = calculation;
+">8</button>
+
+<button onclick="
+calculation +=9;
+document.getElementById('display').value = calculation;
+">9</button>
+
+</p>
+
+<p>
+  <button onclick="
+  calculation +=0;
+  document.getElementById('display').value = calculation;
+  ">0</button>
+
+</p>
+
+
+
+
+  <p>
+
+    <button class="operator" onclick="
+      calculation+= '+'
+      document.getElementById('display').value = calculation;
+      ">+</button>
+  
+  <button class="operator" onclick="
+      calculation+= '-'
+      document.getElementById('display').value = calculation;
+      ">-</button>
+
+  <button class="operator" onclick="
+  calculation+= '*'
+  document.getElementById('display').value = calculation;
+  ">*</button>
+
+  <button class="operator" onclick="
+      calculation+= '/'
+      document.getElementById('display').value = calculation;
+      ">/ </button>
+  
+
+
+  </p>
+
+  <p>
+    <button onclick="
+    eval(calculation);
+    calculation=eval(calculation);
+    document.getElementById('display').value = calculation;
+      ">=</button>
+  
+  <button onclick="
+  calculation=''
+  document.getElementById('display').value = calculation;
+  ">C</button>
+
+
+  </p>
+  
+  
+  
+  <script>
+    let calculation = ''
+  </script>
+
+</body>
+</html>
+
+
